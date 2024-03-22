@@ -1,5 +1,6 @@
 # How to Log Information / Errors in Blazor & Web API with Microsoft Logger Service https://youtu.be/6QmpqY7wzH4
-![Screenshot 2024-03-22 123727](https://github.com/Netcode-Hub/DefaultLogsWithBlazorAndAPI/assets/110794348/aae7c073-5353-4b5b-a2dc-09fb20aa0e94)
+![Screenshot 2024-03-22 124421](https://github.com/Netcode-Hub/DefaultLogsWithBlazorAndAPI/assets/110794348/16ac224f-9d51-4ca5-8321-44dd6110aa39)
+
 
 /*Follow Netcode-Hub*/ <br/>
 https://netcodehub.blogspot.com <br/> 
