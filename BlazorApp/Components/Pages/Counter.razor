@@ -1,0 +1,31 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+@inject ILogger<Counter> counterLogger
+@inject HttpClient http
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async void IncrementCount()
+    {
+        counterLogger.LogInformation("Counter Button is clicked");
+        counterLogger.LogInformation("Current Count = {count}, Prev={prev}", currentCount, (currentCount - 1));
+        currentCount++;
+        try
+        {
+            var response = await http.GetAsync("api/WeatherForecast");
+            var result = await response.Content.ReadAsStringAsync();
+        }catch(Exception ex)
+        {
+            counterLogger.LogError(ex.Message);
+        }
+        
+    }
+}
